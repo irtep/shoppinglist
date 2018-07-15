@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ruokalista generator</title>
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+  </head>
+  <body>
+    <header>
+      <h1>
+        Ostoslista:
+      </h1>
+      <p id= 'toBuy'>        
+      </p>
+    </header>
+      <p id= 'allFoods'> 
+      </p>
+      <p>
+        <input type= "button" value= "Elige cualquier comida" id= "randomb" onclick="addToList('random')"/>
+        <p>
+          Chosen foods: <br/><span id= "chosen"></span>
+        </p>
+      </p>
+
+  </body>
+  <script src="/client.js"></script>
+</html>
