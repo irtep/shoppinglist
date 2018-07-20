@@ -46,28 +46,29 @@ function randomGenerator(){
 function addToList(val){ 
   
   var selected = val;
-  console.log("selected before val", selected);
+  let randomActivated = false;
  
   if (val === 'random') {
-    console.log("random detected");
+    randomActivated = true;
     selected = randomGenerator();
-    console.log("inside if, selected: ", selected);
   }
   
-  console.log("add to list fired, selected: ", selected);
-  
   const choseni = document.getElementById('chosen');
-  const dublix = false;
+  let dublix = false;
   
   // check if chosen already:
+  console.log("choseni length: ", chosenFoods.length);
   for (let ii = 0; ii < chosenFoods.length; ii++) {
+    console.log("dub check. comparing: ", chosenFoods[ii], " to ", selected);
     if (selected === chosenFoods[ii]) {
+      console.log("already chosen");
       dublix = true;
     }  
   }
-  
+ 
   if (dublix === false) {
     choseni.innerHTML = choseni.innerHTML + selected + '<br>';
+    chosenFoods.push(selected);
   }
   
   let numbero;
@@ -81,19 +82,15 @@ function addToList(val){
   // add ingredients
   
   for (let i = 0; i < foodlist[numbero].madeOf.length; i++) {
-    console.log("checking: ", foodlist[numbero].madeOf[i]);
     let dublicated = false;
     // check for dublicates:
     for (let iz = 0; iz < shoppingList.length; iz++) {
-      console.log("to compare: ", shoppingList[iz]);
       if (foodlist[numbero].madeOf[i] === shoppingList[iz]) {
         dublicated = true;
-        console.log("dublicated!");
       }
     }
     if (dublicated === false) {
       shoppingList.push(foodlist[numbero].madeOf[i]);
-      console.log("adding to list");
     }
   }
   
@@ -102,10 +99,17 @@ function addToList(val){
     const listPlace = document.getElementById('toBuy');
     const forShow = shoppingList.join('<br>')
     listPlace.innerHTML = forShow;
-    // return dates.split(',').join("<br />")
+  }
+
+  // if random selected something thats already selected
+  if (dublix === true && randomActivated === true &&
+     chosenFoods.length < foodlist.length) {
+   console.log("random selected already selected. Running again");
+   addToList('random'); 
   }
 }
 
+// make foodlist buttons
 for (let i = 0; i < foodlist.length; i++){
   const currentName = foodlist[i].nombre
   foodPlace.innerHTML = foodPlace.innerHTML + '<input type = "button" value='+currentName+ ' class= "foods" onclick="addToList(this.value)" >' + '</input>'
