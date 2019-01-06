@@ -47,6 +47,15 @@ const foodlist = [
 ]},
 {id: 14, nombre: 'Lihamureke', madeOf: [
 'harina de korppu', 'carne picado', 'huevo'
+]},
+{id: 15, nombre: 'Saltado_de_atun', madeOf: [
+'atun John West', 'cebolla y zanahoria', 'tomate', 'arroz', 'limon', 'papas fritas (opcional)'
+]},
+{id: 16, nombre: 'Pollo_la_brasa', madeOf: [
+'pollo la brasa de minimani', 'arroz', 'alverjitas', 'cualquiera ensalada'
+]},
+{id: 17, nombre: 'Lentejitas', madeOf: [
+'lentejas', 'arroz', 'cebolla', 'huevo'
 ]}
 ];
 
@@ -54,7 +63,6 @@ function randomGenerator(){
   const number = foodlist.length;
   const result =  1 + Math.floor(Math.random() * number);
   const trueResult = result - 1;
-  console.log("from random: ", foodlist[trueResult].nombre);
   return foodlist[trueResult].nombre;
 }
 
