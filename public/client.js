@@ -56,6 +56,9 @@ const foodlist = [
 ]},
 {id: 17, nombre: 'Lentejitas', madeOf: [
 'lentejas', 'arroz', 'cebolla', 'huevo'
+]},
+{id: 18, nombre: 'Pollo_con_pimiento', madeOf: [
+'pimiento rojo', 'arroz', 'perejil', 'alverjitas', 'aji amarillo', 'papa', 'pollo', 'cebolla', 'zanahoria'
 ]}
 ];
 
