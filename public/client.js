@@ -59,6 +59,9 @@ const foodlist = [
 ]},
 {id: 18, nombre: 'Pollo_con_pimiento', madeOf: [
 'pimiento rojo', 'arroz', 'perejil', 'alverjitas', 'aji amarillo', 'papa', 'pollo', 'cebolla', 'zanahoria'
+]},
+{id: 19, nombre: 'Lasagna', madeOf: [
+'salsas', 'carne picado', 'discos de lasagna'
 ]}
 ];
 
