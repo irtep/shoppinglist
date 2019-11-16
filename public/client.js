@@ -62,6 +62,9 @@ const foodlist = [
 ]},
 {id: 19, nombre: 'Lasagna', madeOf: [
 'salsas', 'carne picado', 'discos de lasagna'
+]},
+{id: 20, nombre: 'Aji_de_gallina', madeOf: [
+'pechos de pollo', 'papas', 'aji amarillo', 'apio', 'arroz', 'huevos', 'aceituna', 'lechuga', 'cebolla', 'ajo', 'pan de mol', 'leche (opcional)'
 ]}
 ];
 
